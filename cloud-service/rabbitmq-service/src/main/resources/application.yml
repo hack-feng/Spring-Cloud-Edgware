@@ -1,0 +1,31 @@
+server:
+  port: 8081
+spring:
+  rabbitmq:
+    host: tilacloud-rabbitmq
+    port: 5672
+    username: admin
+    password: welcome1
+    ##开启发送确认
+    publisher-confirms: true
+    ##开发发送失败返回
+    publisher-returns: true
+    listener:
+      simple:
+        acknowledge-mode: manual
+        retry:
+          #开启消费者重试
+          enabled: false
+          #最大重试次数（重试5次还不行则会把消息删掉，默认是不限次数的，次数建议控制在10次以内）
+          max-attempts: 3
+          #重试间隔时间
+          initial-interval: 3000
+      direct:
+        acknowledge-mode: manual
+        retry:
+          #开启消费者重试
+          enabled: false
+          #最大重试次数（重试5次还不行则会把消息删掉，默认是不限次数的，次数建议控制在10次以内）
+          max-attempts: 3
+          #重试间隔时间
+          initial-interval: 3000
