@@ -54,6 +54,12 @@
                 <scope>import</scope>
             </dependency>
 
+            <!-- 添加Eureka Click的依赖 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-eureka</artifactId>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
