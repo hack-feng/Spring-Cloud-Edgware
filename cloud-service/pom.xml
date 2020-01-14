@@ -12,5 +12,6 @@
 
     <modules>
         <module>user-service</module>
+        <module>pub-service</module>
     </modules>
 </project>
