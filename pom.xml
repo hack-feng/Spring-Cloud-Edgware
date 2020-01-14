@@ -13,6 +13,10 @@
         <module>cloud-eureka</module>
     </modules>
 
+    <properties>
+        <lombok.version>1.16.18</lombok.version>
+    </properties>
+
     <!-- 引入SpringBoot依赖版本号 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -33,11 +37,30 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- 引入lombok，简化程序编写 -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+
         <!-- 引入SpringBoot测试类依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <!-- 添加Eureka Click的依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+
+        <!-- 添加Fegin服务调用依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
         </dependency>
 
     </dependencies>
@@ -53,13 +76,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
-            <!-- 添加Eureka Click的依赖 -->
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-eureka</artifactId>
-            </dependency>
-
         </dependencies>
     </dependencyManagement>
 
