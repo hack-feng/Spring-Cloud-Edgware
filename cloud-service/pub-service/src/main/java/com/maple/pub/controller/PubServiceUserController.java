@@ -41,6 +41,7 @@ public class PubServiceUserController {
     @GetMapping("/orderUp")
     public void orderUp(){
         String notifySpeak = "客官，您的两坛二锅头，二斤牛肉，一只烤羊腿，您的菜齐了";
+        System.out.println("【发送消息】：" + notifySpeak);
         String result = userServiceFegin.notifyUser(notifySpeak);
         if(StringUtils.isBlank(result)){
             System.out.println("小二心想：这人居然不搭理我，一会要黑他一顿");

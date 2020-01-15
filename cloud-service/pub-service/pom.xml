@@ -6,12 +6,12 @@
         <groupId>com.maple</groupId>
         <artifactId>cloud-service</artifactId>
         <version>1.0.0</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <artifactId>pub-service</artifactId>
     <version>1.0.0</version>
     <name>pub-service</name>
     <description>Pub service.</description>
+    <packaging>jar</packaging>
 
     <build>
         <plugins>

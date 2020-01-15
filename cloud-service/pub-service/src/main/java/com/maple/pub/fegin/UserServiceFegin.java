@@ -1,7 +1,9 @@
 package com.maple.pub.fegin;
 
 import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @author ZhangFZ
@@ -13,7 +15,6 @@ public interface UserServiceFegin {
     /**
      * 小二通知用户上菜
      */
-    @PostMapping("/notifyUser")
-    String notifyUser(String notifySpeak);
-
+    @PostMapping(value = "/userGoPub/notifyUser", consumes = MediaType.APPLICATION_JSON_VALUE)
+    String notifyUser(@RequestParam("notifySpeak") String notifySpeak);
 }

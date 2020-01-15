@@ -16,6 +16,6 @@ public interface PubServiceFegin {
      * @param speak 招呼小二
      * @return 小二返回的话语
      */
-    @GetMapping("serviceUser")
+    @GetMapping("/pubServiceUser/serviceUser")
     String serviceUser(@RequestParam("speak") String speak);
 }
