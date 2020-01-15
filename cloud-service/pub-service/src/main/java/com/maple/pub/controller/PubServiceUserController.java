@@ -31,7 +31,7 @@ public class PubServiceUserController {
      */
     @GetMapping("/serviceUser")
     public String serviceUser(String speak){
-        System.out.println("【小二收到张三的招呼】：" + speak);
+        System.out.println("【小二收到招呼】：" + speak);
         return "好嘞，客户您稍等...";
     }
 
