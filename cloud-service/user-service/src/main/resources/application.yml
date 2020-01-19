@@ -11,7 +11,7 @@ eureka:
       defaultZone: http://127.0.0.1:8761/eureka/
 
 ###设置feign客户端超时时间
-###SpringCloud feign 默认开启支持ribbon
+###SpringCloud feign 默认开启支持ribbon，注意Feign和Ribbon不要重复重试，否则会产生笛卡尔积次数
 ribbon:
   ###指的是建立连接所用的时间，适用于网络状况正常的情况下，两端连接所用的时间。
   ReadTimeout: 3000
