@@ -27,17 +27,12 @@ public class RestTemplateConfig {
      */
     @Bean
     @LoadBalanced
-    public RestTemplate restTemplate(ClientHttpRequestFactory factory) {
-        return new RestTemplate(factory);
-    }
-
-    @Bean
-    public ClientHttpRequestFactory factory() {
+    public RestTemplate restTemplate() {
         SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
         //单位为ms
         factory.setReadTimeout(15000);
         //单位为ms
         factory.setConnectTimeout(15000);
-        return factory;
+        return new RestTemplate(factory);
     }
 }
