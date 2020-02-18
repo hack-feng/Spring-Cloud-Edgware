@@ -14,5 +14,6 @@
     <modules>
         <module>user-service</module>
         <module>pub-service</module>
+        <module>pay-service</module>
     </modules>
 </project>

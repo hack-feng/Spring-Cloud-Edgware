@@ -65,10 +65,16 @@
             <artifactId>spring-cloud-starter-feign</artifactId>
         </dependency>
 
-        <!--熔断机制-->
+        <!--添加熔断机制依赖-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-hystrix</artifactId>
+        </dependency>
+
+        <!--添加config统一配置中心依赖-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
 
     </dependencies>
